@@ -26,8 +26,10 @@
 		<p id = "GFG_UP" style = 
 			"font-size: 16px; font-weight: bold;">	 
 		</p> 
-		<div id="circle"></div>
-		<button onmousedown = "gfg_Run()"> 
+
+		
+		<button id="button" onmousedown="changeColor('red');" onmouseup="changeColor('white');"> 
+
 			Send Message
 		</button> 
 		
@@ -46,9 +48,10 @@
 				document.body.style.background = color; 
 			} 
 			
-			function gfg_Run() { 
-				changeColor('yellow'); 
-				el_down.innerHTML = "Background Color changed"; 
+			function morse() { 
+				this.onmousedown = changeColor('red'); 
+				this.onmouseup = changeColor('white');
+				
 			}		 
 		</script> 
 		<img src="http://www.codebug.org.uk/assets/steps/540/image_1.png">
